@@ -30,9 +30,9 @@ Gợi ý chia vai:
 | --- | --- | --- | --- |
 | Đỗ Lý Hoàng Nam | Nhóm trưởng & QA (`main` / `qa-testing`) | `<TODO sau khi commit>` | `src/tests/test_qa_must_pass.py` |
 | Hoàng Thế Phong | Báo cáo & Dữ liệu (`docs-report`) | `<TODO>` | `<TODO>` |
-| Nguyễn Văn Hậu | Dev 2 — Shape B `single` (`shape-single`) | `<TODO>` | `<TODO>` |
-| Đoàn Công Hải | Dev 1 — Shape A `workflow` (`shape-workflow`) | `<TODO>` | `<TODO>` |
-| Lê Ngọc Khánh | Dev 3 — Shape C `orchestrator` (`shape-orchestrator`) | `<TODO>` | `<TODO>` |
+| Nguyễn Văn Hậu | Dev 2 — Shape B `single` (`shape-single`) | `6e201de` | `<TODO bổ sung test>` |
+| Đoàn Công Hải | Dev 1 — Shape A `workflow` (`shape-workflow`) | `bc5b2c3` | `<TODO bổ sung test>` |
+| Lê Ngọc Khánh | Dev 3 — Shape C `orchestrator` (`shape-orchestrator`) | `c10fc79` | `src/tests/test_orchestrator_shape.py` |
 
 ## Cá nhân
 
@@ -106,12 +106,14 @@ Ví dụ: `report/team/20241234_NguyenVanAn.md`. (Copy từ `report/team/MSSV_Ho
 
 ### Phần việc phụ trách
 
-- Developer 3 — Kiến trúc Orchestrator, Shape C (nhánh `shape-orchestrator`): hiện thực `src/lab8/shapes/orchestrator.py` (tạo `handoff.v1` allowlist qua `make_handoff`, chạy `run_readonly_investigators`, trace sạch không lộ secret, gọi `durability.issue_refund` với `crash_at`, CP2 & CP3) và bổ sung test cho `orchestrator` trong `src/tests/`.
+- Developer 3 — Kiến trúc Orchestrator, Shape C (nhánh `LeNgocKhanh`): hiện thực `src/lab8/shapes/orchestrator.py` (tạo `handoff.v1` allowlist qua `make_handoff`, chạy `run_readonly_investigators`, trace sạch không lộ secret, gọi `durability.issue_refund` với `crash_at`, CP2 & CP3) và bổ sung test cho `orchestrator` trong `src/tests/`.
 
 ### Đóng góp cụ thể
 
-- `<TODO>`
+- Hiện thực `src/lab8/shapes/orchestrator.py` và viết bộ test `src/tests/test_orchestrator_shape.py` (commit `c10fc79`, PR #3 `60b7668`).
 
 ### Bằng chứng
 
-- `<TODO>`
+- Commit: `c10fc79`
+- Test: `src/tests/test_orchestrator_shape.py`
+- Báo cáo cá nhân: `report/team/2A202603804_LeNgocKhanh.md`
