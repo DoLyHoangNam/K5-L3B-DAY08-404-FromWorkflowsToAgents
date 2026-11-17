@@ -5,7 +5,7 @@
 - Tên nhóm: 404
 - Lớp: L3B
 - Repo nhóm: `K5-L3B-DAY08-404-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt: `https://github.com/DoLyHoangNam/K5-L3B-DAY08-404-FromWorkflowsToAgents`, nhánh `main`, commit chốt: `<TODO CP5>`
+- URL repo, nhánh nộp, commit chốt: `https://github.com/DoLyHoangNam/K5-L3B-DAY08-404-FromWorkflowsToAgents`, nhánh `main`, commit chốt: `ca52050`
 
 ## Thành viên
 

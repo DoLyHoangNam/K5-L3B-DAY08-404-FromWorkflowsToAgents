@@ -9,7 +9,7 @@
   3. Nguyễn Văn Hậu (MSSV: 2A202603932) — Developer 2 — Kiến trúc Single Agent (`Hau`)
   4. Đoàn Công Hải (MSSV: 2A202603739) — Developer 1 — Kiến trúc Workflow (`DoanCongHai`)
   5. Lê Ngọc Khánh (MSSV: 2A202603804) — Developer 3 — Kiến trúc Orchestrator (`LeNgocKhanh`)
-- Commit chốt (trùng `report/team/decision_adr.md`): `9153f85` *(nhóm trưởng cập nhật hash chốt cuối sau khi merge PR)*
+- Commit chốt (trùng `report/team/decision_adr.md`): `ca52050`
 
 ---
 
