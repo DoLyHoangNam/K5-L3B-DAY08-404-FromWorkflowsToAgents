@@ -17,16 +17,16 @@
 
 ### 2.1. Hiểu bài toán
 Hệ thống giải quyết bài toán tự động hóa quy trình xử lý bồi thường khiếu nại (claims resolution) cho đơn vị logistics LogiX-VN. Hệ thống phải đảm bảo 3 trụ cột kỹ thuật cốt lõi:
-1. **Tính chính xác nghiệp vụ (Business Correctness):** Tuân thủ tuyệt đối các chính sách hiện hành (`effective_date <= 2026-11-15`, `is_current = 1`) bao gồm chính sách giao trễ (`SHIP-LATE-2026`) và hư hỏng hàng hóa (`DMG-04`). Quản lý trần bồi thường theo đơn hàng (`order-level cap`): tổng số tiền hoàn cho một đơn không vượt quá quyền lợi tối đa; nếu đã hoàn trước đó thì chỉ hoàn phần chênh lệch.
+1. **Tính chính xác nghiệp vụ (Business Correctness):** Tuân thủ tuyệt đối các chính sách hiện hành (`effective_date <= 2026-11-15`, `is_current = 1`) bao gồm chính sách giao trễ (`SHIP-LATE-03` thuộc `POL-2026-11`) và hư hỏng hàng hóa (`DMG-04`). Quản lý trần bồi thường theo đơn hàng (`order-level cap`): tổng số tiền hoàn cho một đơn không vượt quá quyền lợi tối đa; nếu đã hoàn trước đó thì chỉ hoàn phần chênh lệch.
 2. **An toàn sổ cái & Khả năng chịu sự cố (Ledger Durability & Crash Safety):** Ghi nhận giao dịch hoàn tiền thông qua cơ chế sổ cái bất biến (immutable ledger), sử dụng idempotency key `refund:{claim_id}` để đảm bảo gọi lại nhiều lần không tạo ra duplicate refund. Xử lý an toàn khi hệ thống gặp sự cố đột ngột (`InjectedCrash`) ở 3 mốc: trước khi tạo hiệu ứng (before effect), sau khi tạo hiệu ứng nhưng trước checkpoint, và sau checkpoint.
 3. **Bảo mật ranh giới & An toàn dữ liệu (Security Boundary & Redaction):** Bảo vệ các bí mật hệ thống (`CANARY_SECRET_*`), không để rò rỉ PII người dùng (số điện thoại, địa chỉ, tên người nhận, ghi chú nội bộ) vào nhật ký thực thi (Trace). Xử lý nội dung văn bản ticket như dữ liệu không đáng tin cậy (untrusted user input), phòng chống tấn công chèn lệnh (prompt injection).
 
 ### 2.2. Phân công công việc
 Nhóm 5 thành viên áp dụng quy trình Git Flow chuyên nghiệp với các nhánh tính năng độc lập:
-- **Đỗ Lý Hoàng Nam:** Quản trị repo, thiết lập môi trường, xây dựng bộ test QA kiểm soát chất lượng (`test_qa_must_pass.py`), chạy crash test suite và benchmark, review và merge Pull Request.
+- **Đỗ Lý Hoàng Nam:** Quản trị repo, thiết lập môi trường, xây dựng bộ test QA kiểm soát chất lượng (`test_qa_must_pass.py`), chạy crash test suite và benchmark, review và merge Pull Request, đồng thời triển khai nghiên cứu mở rộng Bonus Topic B3 (`swarm_verified.py`).
 - **Đoàn Công Hải:** Hiện thực Shape A (`workflow.py`) và bộ test `test_workflow.py`.
 - **Nguyễn Văn Hậu:** Hiện thực Shape B (`single.py`) với vòng lặp ReAct và bộ test `test_single_shape.py`.
-- **Lê Ngọc Khánh:** Hiện thực Shape C (`orchestrator.py`) với Typed Handoff, Read-only Investigators và bộ test `test_orchestrator_shape.py`. Đồng thời phát triển nghiên cứu mở rộng Topic Bonus B3 (`swarm_verified.py`).
+- **Lê Ngọc Khánh:** Hiện thực Shape C (`orchestrator.py`) với Typed Handoff, Read-only Investigators và bộ test `test_orchestrator_shape.py`.
 - **Hoàng Thế Phong:** Phân tích dữ liệu từ `benchmark.json` và `crash.json`, thực hiện thực nghiệm ablation R3 (`ablation_benchmark.json`), soạn thảo `decision_adr.md`, `research_card.md`, hoàn thiện báo cáo nhóm và bộ test kiểm chứng chỉ số `test_phong_report_metrics.py`.
 
 ### 2.3. Thứ tự triển khai 4 shape
@@ -111,10 +111,10 @@ Theo kết quả từ `src/reports/crash.json`, hệ thống đạt mức độ 
 ## 6. Tổng hợp đóng góp
 
 Tất cả 5 thành viên đều hoàn thành xuất sắc các phân công chuyên biệt và có commit mã nguồn / test cụ thể trên repo:
-- **Đỗ Lý Hoàng Nam:** Quản trị nhóm, viết bộ test QA `test_qa_must_pass.py`, thực hiện crash suite và benchmark.
+- **Đỗ Lý Hoàng Nam:** Quản trị nhóm, viết bộ test QA `test_qa_must_pass.py`, thực hiện crash suite, benchmark và triển khai Bonus Topic B3 (`swarm_verified.py`, `test_bonus_swarm_verified.py`).
 - **Đoàn Công Hải:** Xây dựng Shape A `workflow.py` và bộ test `test_workflow.py`.
 - **Nguyễn Văn Hậu:** Xây dựng Shape B `single.py` và bộ test `test_single_shape.py`.
-- **Lê Ngọc Khánh:** Xây dựng Shape C `orchestrator.py`, bộ test `test_orchestrator_shape.py` và nghiên cứu Bonus B3.
+- **Lê Ngọc Khánh:** Xây dựng Shape C `orchestrator.py` và bộ test `test_orchestrator_shape.py`.
 - **Hoàng Thế Phong:** Phân tích dữ liệu benchmark/crash, thực hiện ablation R3, viết báo cáo kiến trúc `decision_adr.md`, `research_card.md`, `group_report.md` và bộ test `test_phong_report_metrics.py`.
 
 *(Chi tiết mã commit và đối chiếu kiểm thử được ghi nhận đầy đủ trong bảng đóng góp tại [TEAM.md](../../TEAM.md) và các báo cáo cá nhân).*

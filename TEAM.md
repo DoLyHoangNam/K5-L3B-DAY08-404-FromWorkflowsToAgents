@@ -15,7 +15,7 @@
 |   2 | Hoàng Thế Phong | 2A202603832 | phonghoangthe112@gmail.com | Hphong2305 | Chuyên viên Báo cáo & Dữ liệu (`docs-report`) |
 |   3 | Nguyễn Văn Hậu | 2A202603932 | nguyenhau230303@gmail.com | common-maker | Developer 2 — Kiến trúc Single Agent, Shape B (`shape-single`) |
 |   4 | Đoàn Công Hải | 2A202603739 | haidoan200426@gmail.com | rawser246 | Developer 1 — Kiến trúc Workflow, Shape A (`shape-workflow`) |
-|   5 | Lê Ngọc Khánh | 2A202603804 | lekhanh2k5@gmail.com | lekhanh2k5 | Developer 3 — Kiến trúc Orchestrator, Shape C (`shape-orchestrator`) |
+|   5 | Lê Ngọc Khánh | 2A202603804 | lekhanh2k5@gmail.com | lekhanh2k5-dotcom | Developer 3 — Kiến trúc Orchestrator, Shape C (`shape-orchestrator`) |
 
 Gợi ý chia vai:
 
@@ -28,8 +28,8 @@ Gợi ý chia vai:
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-| Đỗ Lý Hoàng Nam | Nhóm trưởng & QA (`main` / `qa-testing`) | `6e10b54` | `src/tests/test_qa_must_pass.py` |
-| Hoàng Thế Phong | Báo cáo & Dữ liệu (`docs-report`) | `<TODO>` | `<TODO>` |
+| Đỗ Lý Hoàng Nam | Nhóm trưởng & QA (`main` / `qa-testing`) | `6e10b54`, `15ebe13` | `src/tests/test_qa_must_pass.py`, `src/tests/test_bonus_swarm_verified.py` |
+| Hoàng Thế Phong | Báo cáo & Dữ liệu (`Phong`) | `572d141` | `src/tests/test_phong_report_metrics.py` |
 | Nguyễn Văn Hậu | Dev 2 — Shape B `single` (`shape-single`) | `c98d350`, `b0fe2a5` | `src/tests/test_single_shape.py` |
 | Đoàn Công Hải | Dev 1 — Shape A `workflow` (`shape-workflow`) | `bc5b2c3`, `1aeff4b` | `src/tests/test_workflow.py` |
 | Lê Ngọc Khánh | Dev 3 — Shape C `orchestrator` (`shape-orchestrator`) | `03293c2` | `src/tests/test_orchestrator_shape.py` |
@@ -52,27 +52,29 @@ Ví dụ: `report/team/20241234_NguyenVanAn.md`. (Copy từ `report/team/MSSV_Ho
 
 ### Đóng góp cụ thể
 
-- Thiết lập môi trường, phân công 5 thành viên trong `TEAM.md`, viết bộ test QA must-pass/crash `src/tests/test_qa_must_pass.py`, quản lý merge PR và chạy benchmark/crash suite.
+- Thiết lập môi trường, phân công 5 thành viên trong `TEAM.md`, viết bộ test QA must-pass/crash `src/tests/test_qa_must_pass.py` (`6e10b54`), quản lý merge PR (#1–#7), chạy benchmark/crash suite và triển khai Bonus Topic B3 `src/bonus/swarm_verified.py` + `src/tests/test_bonus_swarm_verified.py` (`15ebe13`).
 
 ### Bằng chứng
 
-- Test: `src/tests/test_qa_must_pass.py`
-- Báo cáo cá nhân: `report/team/2A202603777_DoLyHoangNam.md`
-- Commit / Report: `<TODO sau khi commit & chạy CP4/CP5>`
+- Commit: `35d58b2`, `05b97b6`, `6e10b54`, `15ebe13`
+- Test: `src/tests/test_qa_must_pass.py`, `src/tests/test_bonus_swarm_verified.py`
+- Báo cáo cá nhân & bonus: `report/team/2A202603777_DoLyHoangNam.md`, `report/team/bonus_report.md`
 
 ## 2A202603832_HoangThePhong
 
 ### Phần việc phụ trách
 
-- Chuyên viên Báo cáo & Dữ liệu (nhánh `docs-report`): tổng hợp số liệu từ `src/reports/benchmark.json` và `crash.json`, hoàn thiện `report/team/decision_adr.md`, `report/team/research_card.md`, `report/team/group_report.md`, và thêm/sửa test trong `src/tests/`.
+- Chuyên viên Báo cáo & Dữ liệu (nhánh `Phong`): tổng hợp số liệu từ `src/reports/benchmark.json` và `crash.json`, thực hiện ablation R3 (`src/reports/ablation_benchmark.json`), hoàn thiện `report/team/decision_adr.md`, `report/team/research_card.md`, `report/team/group_report.md`, và bổ sung test trong `src/tests/`.
 
 ### Đóng góp cụ thể
 
-- `<TODO>`
+- Viết bộ test `src/tests/test_phong_report_metrics.py` (6 test kiểm tra tính toàn vẹn báo cáo/metric), thực nghiệm ablation R3 (`src/reports/ablation_benchmark.json`), hoàn thiện ADR, Research Card và Báo cáo nhóm (commit `572d141`, PR #7 `e1d8649`).
 
 ### Bằng chứng
 
-- `<TODO>`
+- Commit: `572d141` (PR #7 `e1d8649`)
+- Test: `src/tests/test_phong_report_metrics.py`
+- Báo cáo cá nhân: `report/team/2A202603832_HoangThePhong.md`
 
 ## 2A202603932_NguyenVanHau
 
