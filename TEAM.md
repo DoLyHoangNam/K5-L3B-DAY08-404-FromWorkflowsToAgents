@@ -28,11 +28,11 @@ Gợi ý chia vai:
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-| Đỗ Lý Hoàng Nam | Nhóm trưởng & QA (`main` / `qa-testing`) | `<TODO sau khi commit>` | `src/tests/test_qa_must_pass.py` |
+| Đỗ Lý Hoàng Nam | Nhóm trưởng & QA (`main` / `qa-testing`) | `6e10b54` | `src/tests/test_qa_must_pass.py` |
 | Hoàng Thế Phong | Báo cáo & Dữ liệu (`docs-report`) | `<TODO>` | `<TODO>` |
-| Nguyễn Văn Hậu | Dev 2 — Shape B `single` (`shape-single`) | `6e201de` | `<TODO bổ sung test>` |
-| Đoàn Công Hải | Dev 1 — Shape A `workflow` (`shape-workflow`) | `bc5b2c3` | `<TODO bổ sung test>` |
-| Lê Ngọc Khánh | Dev 3 — Shape C `orchestrator` (`shape-orchestrator`) | `c10fc79` | `src/tests/test_orchestrator_shape.py` |
+| Nguyễn Văn Hậu | Dev 2 — Shape B `single` (`shape-single`) | `c98d350`, `b0fe2a5` | `src/tests/test_single_shape.py` |
+| Đoàn Công Hải | Dev 1 — Shape A `workflow` (`shape-workflow`) | `bc5b2c3`, `1aeff4b` | `src/tests/test_workflow.py` |
+| Lê Ngọc Khánh | Dev 3 — Shape C `orchestrator` (`shape-orchestrator`) | `03293c2` | `src/tests/test_orchestrator_shape.py` |
 
 ## Cá nhân
 
@@ -78,29 +78,33 @@ Ví dụ: `report/team/20241234_NguyenVanAn.md`. (Copy từ `report/team/MSSV_Ho
 
 ### Phần việc phụ trách
 
-- Developer 2 — Kiến trúc Single Agent, Shape B (nhánh `shape-single`): hiện thực `src/lab8/shapes/single.py` (vòng ReAct tối đa 8 bước, dùng tool đọc, gọi `durability.issue_refund` với `crash_at`, CP2 & CP3) và bổ sung test cho `single` trong `src/tests/`.
+- Developer 2 — Kiến trúc Single Agent, Shape B (nhánh `Hau`): hiện thực `src/lab8/shapes/single.py` (vòng ReAct tối đa 8 bước, dùng tool đọc, gọi `durability.issue_refund` với `crash_at`, CP2 & CP3) và bổ sung test cho `single` trong `src/tests/`.
 
 ### Đóng góp cụ thể
 
-- `<TODO>`
+- Hiện thực `src/lab8/shapes/single.py` (`c98d350` / `6e201de`) và viết 3 test trong `src/tests/test_single_shape.py` (`b0fe2a5`).
 
 ### Bằng chứng
 
-- `<TODO>`
+- Commit: `c98d350`, `b0fe2a5`
+- Test: `src/tests/test_single_shape.py`
+- Báo cáo cá nhân: `report/team/2A202603932_NguyenVanHau.md`
 
 ## 2A202603739_DoanCongHai
 
 ### Phần việc phụ trách
 
-- Developer 1 — Kiến trúc Workflow, Shape A (nhánh `shape-workflow`): hiện thực `src/lab8/shapes/workflow.py` (các bước Python tĩnh, `compute_compensation`, gọi `durability.issue_refund` với `crash_at`, CP2 & CP3) và bổ sung test cho `workflow` trong `src/tests/`.
+- Developer 1 — Kiến trúc Workflow, Shape A (nhánh `DoanCongHai`): hiện thực `src/lab8/shapes/workflow.py` (các bước Python tĩnh, `compute_compensation`, gọi `durability.issue_refund` với `crash_at`, CP2 & CP3) và bổ sung test cho `workflow` trong `src/tests/`.
 
 ### Đóng góp cụ thể
 
-- `<TODO>`
+- Hiện thực `src/lab8/shapes/workflow.py` (`bc5b2c3`) và viết 7 test trong `src/tests/test_workflow.py` (`1aeff4b`, PR #4 `f719eb2`).
 
 ### Bằng chứng
 
-- `<TODO>`
+- Commit: `bc5b2c3`, `1aeff4b`
+- Test: `src/tests/test_workflow.py`
+- Báo cáo cá nhân: `report/team/2A202603739_DoanCongHai.md`
 
 ## 2A202603804_LeNgocKhanh
 
