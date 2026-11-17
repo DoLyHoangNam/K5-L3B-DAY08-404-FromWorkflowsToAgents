@@ -9,9 +9,7 @@
 
 ## 2. Phần việc phụ trách
 
-Shape, module hoặc phần báo cáo bạn phụ trách.
-
-...
+- Developer 3 — Kiến trúc Orchestrator, Shape C: hiện thực `src/lab8/shapes/orchestrator.py` (handoff allowlist qua `make_handoff`, investigator chỉ đọc qua `run_readonly_investigators`, trace sạch, gọi `durability.issue_refund` với `crash_at`; CP2 & CP3) và bổ sung test cho `orchestrator` trong `src/tests/`.
 
 ## 3. Đóng góp cụ thể
 
