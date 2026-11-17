@@ -15,7 +15,7 @@
 |   2 | Hoàng Thế Phong | 2A202603832 | phonghoangthe112@gmail.com | Hphong2305 | Chuyên viên Báo cáo & Dữ liệu (`docs-report`) |
 |   3 | Nguyễn Văn Hậu | 2A202603932 | nguyenhau230303@gmail.com | common-maker | Developer 2 — Kiến trúc Single Agent, Shape B (`shape-single`) |
 |   4 | Đoàn Công Hải | 2A202603739 | haidoan200426@gmail.com | rawser246 | Developer 1 — Kiến trúc Workflow, Shape A (`shape-workflow`) |
-|   5 | Khánh (`<TODO Họ tên đầy đủ>`) | `<TODO>` | `<TODO>` | `<TODO>` | Developer 3 — Kiến trúc Orchestrator, Shape C (`shape-orchestrator`) |
+|   5 | Lê Ngọc Khánh | 2A202603804 | lekhanh2k5@gmail.com | lekhanh2k5 | Developer 3 — Kiến trúc Orchestrator, Shape C (`shape-orchestrator`) |
 
 Gợi ý chia vai:
 
@@ -32,7 +32,7 @@ Gợi ý chia vai:
 | Hoàng Thế Phong | Báo cáo & Dữ liệu (`docs-report`) | `<TODO>` | `<TODO>` |
 | Nguyễn Văn Hậu | Dev 2 — Shape B `single` (`shape-single`) | `<TODO>` | `<TODO>` |
 | Đoàn Công Hải | Dev 1 — Shape A `workflow` (`shape-workflow`) | `<TODO>` | `<TODO>` |
-| Khánh | Dev 3 — Shape C `orchestrator` (`shape-orchestrator`) | `<TODO>` | `<TODO>` |
+| Lê Ngọc Khánh | Dev 3 — Shape C `orchestrator` (`shape-orchestrator`) | `<TODO>` | `<TODO>` |
 
 ## Cá nhân
 
@@ -102,7 +102,7 @@ Ví dụ: `report/team/20241234_NguyenVanAn.md`. (Copy từ `report/team/MSSV_Ho
 
 - `<TODO>`
 
-## <TODO MSSV>_Khanh
+## 2A202603804_LeNgocKhanh
 
 ### Phần việc phụ trách
 
