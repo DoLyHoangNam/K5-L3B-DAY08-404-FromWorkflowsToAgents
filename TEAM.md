@@ -15,7 +15,7 @@
 |   2 | Hoàng Thế Phong | 2A202603832 | phonghoangthe112@gmail.com | Hphong2305 | Chuyên viên Báo cáo & Dữ liệu (`docs-report`) |
 |   3 | Nguyễn Văn Hậu | 2A202603932 | nguyenhau230303@gmail.com | common-maker | Developer 2 — Kiến trúc Single Agent, Shape B (`shape-single`) |
 |   4 | Đoàn Công Hải | 2A202603739 | haidoan200426@gmail.com | rawser246 | Developer 1 — Kiến trúc Workflow, Shape A (`shape-workflow`) |
-|   5 | Lê Ngọc Khánh | 2A202603804 | lekhanh2k5@gmail.com | lekhanh2k5-dotcom | Developer 3 — Kiến trúc Orchestrator, Shape C (`shape-orchestrator`) |
+|   5 | Lê Ngọc Khánh | 2A202603804 | lekhanh2k5@gmail.com | lekhanh2k5 | Developer 3 — Kiến trúc Orchestrator, Shape C (`shape-orchestrator`) |
 
 Gợi ý chia vai:
 
